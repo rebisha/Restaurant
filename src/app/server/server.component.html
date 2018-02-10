@@ -1,0 +1,11 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <p [ngStyle] ="{backgroundColor: getColor()}" [ngClass] ="{online: serverStatus === 'online'}"> server with ID {{ serverId }} is {{ getServerStatus() }}</p> <!--only if the serverStatus === online the ngClass will call the .online style from its typescript file.then the color of the text will change to white.-->
+<!--ngStyle is used to style this statement, ngStyle will change the background color depending on the serverStatus. It will dynamically change the style-->
+</body>
+</html>

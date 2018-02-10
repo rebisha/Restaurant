@@ -1,0 +1,18 @@
+<label>Server Name</label>
+<!--<input type="text" class="form-control" 
+    (input) =" onUpdateServerName($event)"> -->
+
+<input type="text" class="form-control"  [(ngModel)] ="serverName"> <!-- two way binding using ngModel-->
+<!--<p>{{ serverName }}</p>-->
+
+<button class="btn btn-primary" [disabled] = "!allowNewServer" (click) =" onCreateServer()">Add Server</button>
+<!-- allowNewServer garyo bhane 6ai paila button enable hun6 then after 2 sec disable hun6 but !allowNewServer garyo bhane 6ai first 2sec disable hun6 then enable hun6-->
+
+<!--<p>{{ allowNewServer }}</p>-->
+<!--<p>{{ serverCreationStatus }}</p>-->
+
+<p *ngIf =" serverCreated; else noServer">Server was created and the name is {{ serverName }}</p><!-- this is how we use *ngIf-else-->
+<ng-template #noServer>
+<p>No server was created.</p></ng-template><!--#noServer acts as a markup that links this statement with the statement that has noServer in their else statement-->
+
+<app-server *ngFor="let server of servers"></app-server>  <!--nesting components-->

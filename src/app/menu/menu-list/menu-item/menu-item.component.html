@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="row">
+        <div class="menu" ><h1>MENU</h1></div>
+        <section style="max-height:10%;">
+
+        </section>
+        <div class="container">
+        
+            <div class="food"> <h3>ENTREE</h3>
+                <div class="list-group-item clearfix"
+                    *ngFor ="let breaky of breakfast">
+                        <div class="pull-left">
+                        <h4 class="list-group-item-heading" >{{ breaky.name }} </h4>
+                        <p class="list-group-item-text">{{ breaky.description }}</p> 
+                        </div>
+                        <span class="pull-right">${{ breaky.price }} </span> 
+                </div>
+            </div>
+
+            <div class="food"><h3>MAINS</h3>
+                <div class="list-group-item clearfix"
+                    *ngFor ="let lunch of lunch">
+                        <div class="pull-left">
+                        <h4 class="list-group-item-heading" >{{ lunch.name }}</h4>
+                        <p class="list-group-item-text">{{ lunch.description }}</p> 
+                        </div>
+                        <span class="pull-right">${{ lunch.price }}</span> 
+                </div>
+            </div>
+        
+            <div class="food"><h3>DESSERT</h3>
+                <div class="list-group-item clearfix"
+                    *ngFor ="let dinner of dinner"><!--*ngFor use garnu ko karan 6ai typescript file ma bhako jati menu-list 6ai display hos bhanera ho-->
+                        <div class="pull-left">
+                        <h4 class="list-group-item-heading">{{ dinner.name }} </h4>
+                        <p class="list-group-item-text">{{ dinner.description }}</p> 
+                        </div>
+                        <span class="pull-right">${{ dinner.price }}</span> 
+                </div>
+            </div>
+</div>
+</div>   
+</div>
+

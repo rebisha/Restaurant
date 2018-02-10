@@ -1,0 +1,47 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+
+        <div class="menu" ><h1>MENU</h1></div>
+
+        <section style="max-height:10%;"></section>
+
+        <div class="container"></div>
+        
+            <div class="food"> <h3>ENTREE</h3>
+                <div class="list-group-item clearfix"
+                    *ngFor ="let entree of entree">
+                        <div class="pull-left">
+                        <h4 class="list-group-item-heading" >{{ entree.name }} </h4>
+                        <p class="list-group-item-text">{{ entree.description }}</p> 
+                        </div>
+                        <span class="pull-right">${{ entree.price }} </span> 
+                </div>
+            </div>
+
+            <div class="food"><h3>MAINS</h3>
+                <div class="list-group-item clearfix"
+                    *ngFor ="let mains of mains">
+                        <div class="pull-left">
+                        <h4 class="list-group-item-heading" >{{ mains.name }}</h4>
+                        <p class="list-group-item-text">{{ mains.description }}</p> 
+                        </div>
+                        <span class="pull-right">${{ mains.price }}</span> 
+                </div>
+            </div>
+        
+            <div class="food"><h3>DESSERT</h3>
+                <div class="list-group-item clearfix"
+                    *ngFor ="let dessert of dessert"><!--*ngFor use garnu ko karan 6ai typescript file ma bhako jati menu-list 6ai display hos bhanera ho-->
+                       <div class="pull-left">
+                        <h4 class="list-group-item-heading">{{ dessert.name }} </h4>
+                        <p class="list-group-item-text">{{ dessert.description }}</p> 
+                        </div>
+                        <span class="pull-right">${{ dessert.price }}</span> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+

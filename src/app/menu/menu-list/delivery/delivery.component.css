@@ -1,0 +1,11 @@
+.center {
+    display: block;
+    margin: auto ;
+}
+li{
+    list-style:none;
+    
+}
+li a{
+    color:black;
+}

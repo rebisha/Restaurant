@@ -1,0 +1,94 @@
+<app-navbar></app-navbar>
+<div class="container">
+    
+        <div class="col-sm-12">
+            <div class="center">
+                <img src = "../assets/img/f(2).jpg" class="img-responsive">
+            </div>
+        </div>
+        
+        <app-reservation></app-reservation>
+
+        <div class="container">
+            <div class="col-md-6">
+            <h1>Contact Us</h1> 
+             <div class="container">
+                 65 Winter Crescent <p></p>Reservoir, VIC 3073 <p></p>
+                 T : 0400000000
+                 <p></p>
+                 E : restaurant@restaurantName.com.au
+              </div>
+              </div>
+
+            <div class="col-md-6">
+                <h1>Leave a comment</h1>
+           
+                 <form [formGroup]="reviewForm" (ngSubmit)="onSubmit()"><!--declaring our form via property binding []-->
+                     <label for="name">Name</label>
+                     <!--formControlName allows you to connect the name to our typescript name-->
+                     <input 
+                         type="text" 
+                         name="name"
+                         id="name"
+                         formControlName="name" 
+                         placeholder="Full Name"
+                         class="form-control">
+                     <span 
+                         *ngIf="!reviewForm.get('name').valid && reviewForm.get('name').touched"
+                         class="help-block">Please enter a valid username.</span>
+                     
+                     <label for="email">Email </label>
+                     <input 
+                         type="text" 
+                         name="email" 
+                         id="name"
+                         formControlName="email"
+                         placeholder="test@gmail.com"
+                         class="form-control" />
+                     <span 
+                         *ngIf="!reviewForm.get('email').valid && reviewForm.get('email').touched"
+                         class="help-block">Please enter a valid email.</span>
+
+
+                     <label for="comment">Comment</label>
+                     <textarea 
+                         id="comment" 
+                         name="comment"
+                         formControlName="comment" 
+                         placeholder="Leave a comment.." 
+                         class="form-control"></textarea>
+                     <p></p>
+                 
+                    <div class="radio" *ngFor="let rating of ratings">
+                        <label>
+                            <input type="radio" 
+                                name="rating"
+                                formControlName="rating"
+                                [value]="rating">{{ rating }}
+                        </label>
+                    </div>
+                     <input type="button" 
+                         class="btn btn-primary"
+                         type="submit"
+                         [disabled]>
+            </form>
+            </div>
+
+            </div>
+         
+
+       <!--
+        <hr />
+        <div class="row" *ngIf="submitted"><!--this section will display our data-->
+            <!--<div class="col-md-4">
+            <h3>Your Data</h3>
+            <p>Name: {{ user.name }}</p>
+            <p>Comment: {{ user.comment }} </p>
+            <p>Rating: {{ user.rating }}</p>
+            </div>
+         </div>
+          <hr />  -->
+         
+         
+    </div>
+   

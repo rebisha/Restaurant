@@ -1,0 +1,29 @@
+.center {
+    margin-bottom : 30px;
+}
+h1 {
+    font-family : 'Harlow Solid';
+    color : darkorange;
+}
+
+.btn {
+    background-color : darkorange;
+    border : 1px solid darkorange;
+}
+.col-md-6 {
+    border : 0px;
+}
+
+.form-control {
+    border-radius: 0px;
+}
+.radio {
+    margin-top : 0px;
+    display : inline;
+    padding : 8px;
+    float : left;
+    font-size : 12px;
+}
+input.ng-invalid.ng-touched {
+    border : 1px solid red;
+}

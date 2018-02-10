@@ -1,0 +1,32 @@
+.menu {
+    text-align : center;
+    height : 20px;
+    margin-top : 50px;
+    margin-bottom : 20px;
+    font-family : Broadway;
+}
+.food {
+    text-align : center;
+    font-family : Candara;
+}
+/*.col-md-4 {
+    text-align:center;
+    font-family : 'Calibri';
+    font-size :  16px;
+    border : 0px;
+    margin-bottom:10px;
+}*/
+
+.list-group-item {
+    border : 0px;
+}
+.list-group-item-heading {
+    font-family : 'Baskerville Old Face';
+    font-size : 22px;
+}
+.list-group-item-text {
+    font-size : 18px;
+}
+.pull-right {
+    font-size : 22px;
+}

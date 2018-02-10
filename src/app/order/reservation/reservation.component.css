@@ -1,0 +1,17 @@
+h1 {
+    font-family : 'Harlow Solid';
+    color : darkorange;
+}
+.col-md-12{
+    margin-bottom : 20px;
+}
+input[type=text,number]{
+    width: 10%;
+}
+.btn {
+    background-color : darkorange;
+    border : 1px solid darkorange;
+}
+.reservation {
+    margin-bottom : 20px;
+}

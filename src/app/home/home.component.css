@@ -1,0 +1,12 @@
+.col-md-12 {
+    margin-top : 10px;
+    margin-bottom : 10px;
+}
+.col-md-5 {
+    font-family : 'Copperplate Gothic';
+    color: goldenrod;
+    margin-top : 80px;
+}
+.image {
+    float : right;
+}
